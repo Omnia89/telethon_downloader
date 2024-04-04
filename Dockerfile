@@ -9,6 +9,7 @@ RUN sed -i -e's/ main/ main contrib non-free/g' /etc/apt/sources.list && \
     apt-get -q update && \
     apt-get -qy dist-upgrade && \
     apt-get install -qy \
+    rustc \
     ffmpeg \
     unrar \
     unzip \
