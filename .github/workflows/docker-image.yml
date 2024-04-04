@@ -1,0 +1,22 @@
+name: Build and push Docker image
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Docker Tag'
+        required: true
+        default: 'latest'
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out
+      uses: actions/checkout@v3
+    
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag telethon_downloader:$(date +%s) --tag ${{ github.event.inputs.tag }}
