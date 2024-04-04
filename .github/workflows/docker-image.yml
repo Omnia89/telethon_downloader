@@ -42,4 +42,4 @@ jobs:
         file: ./Dockerfile
         platforms: linux/arm/v7
         push: true
-        tags: ghcr.io/${{ github.repository }}/myimage:latest, ${{ github.repository }}:${{ github.event.inputs.tag }}
+        tags: ghcr.io/omnia_89/telethon_downloader/myimage:latest, omnia_89/telethon_downloader:${{ github.event.inputs.tag }}
