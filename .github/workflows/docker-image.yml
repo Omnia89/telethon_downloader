@@ -2,11 +2,11 @@ name: Build and push Docker image
 
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Docker Tag'
-        required: true
-        default: 'latest'
+  #   inputs:
+  #     tag:
+  #       description: 'Docker Tag'
+  #       required: true
+  #       default: 'latest'
   push:
     branches: [ "master" ]
 
@@ -42,4 +42,4 @@ jobs:
         file: ./Dockerfile
         platforms: linux/arm/v7
         push: true
-        tags: ghcr.io/omnia_89/telethon_downloader/myimage:latest, omnia_89/telethon_downloader:${{ github.event.inputs.tag }}
+        tags: ghcr.io/omnia_89/telethon_downloader/myimage:latest #, omnia_89/telethon_downloader:${{ github.event.inputs.tag }}
