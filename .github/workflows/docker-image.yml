@@ -48,4 +48,4 @@ jobs:
         file: ./Dockerfile
         platforms: linux/arm/v7
         push: true
-        tags: ghcr.io/omnia_89/telethon_downloader:latest #, omnia_89/telethon_downloader:${{ github.event.inputs.tag }}
+        tags: ghcr.io/omnia89/telethon_downloader:latest #, omnia89/telethon_downloader:${{ github.event.inputs.tag }}
