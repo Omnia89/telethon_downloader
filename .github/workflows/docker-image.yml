@@ -10,17 +10,19 @@ on:
   push:
     branches: [ "master" ]
 
-permissions:
-  contents: read
-  packages: write
+
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      packages: write
+
     steps:
     - name: Check out
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set version
       run: |
